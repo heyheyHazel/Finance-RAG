@@ -1,0 +1,63 @@
+# ============================================================
+# 金融研报分析 Agent - 依赖清单
+# Financial Report Analysis Agent - Requirements
+# ============================================================
+
+# ----------------------
+# LlamaIndex 核心框架
+# ----------------------
+llama-index>=0.10.0
+llama-index-core>=0.10.0
+llama-index-llms-openai>=0.1.0          # OpenAI 兼容接口，用于调用 DeepSeek
+llama-index-embeddings-huggingface>=0.1.0  # HuggingFace 本地 embedding
+llama-index-vector-stores-milvus>=0.1.0   # Milvus 向量数据库集成
+llama-index-readers-file>=0.1.0          # PDF 文件读取
+llama-index-postprocessor-cohere-rerank>=0.1.0  # Cohere 重排序（可选）
+llama-index-agent-openai>=0.1.0          # ReAct Agent 支持
+
+# ----------------------
+# PDF 处理
+# ----------------------
+pypdf>=4.0.0                             # PDF 解析
+PyMuPDF>=1.23.0                          # 高级 PDF 处理（可选）
+
+# ----------------------
+# 向量数据库
+# ----------------------
+pymilvus>=2.3.0                          # Milvus Python SDK
+milvus>=2.3.0                            # Milvus Lite（轻量级本地部署）
+
+# ----------------------
+# Embedding 模型
+# ----------------------
+sentence-transformers>=2.2.0            # BGE-M3 依赖
+transformers>=4.35.0                     # HuggingFace Transformers
+torch>=2.0.0                             # PyTorch
+
+# ----------------------
+# 数据分析与可视化
+# ----------------------
+pandas>=2.0.0                            # 数据处理
+numpy>=1.24.0                            # 数值计算
+matplotlib>=3.7.0                        # 基础绑图
+seaborn>=0.12.0                          # 统计可视化
+plotly>=5.18.0                           # 交互式图表
+
+# ----------------------
+# Web 前端
+# ----------------------
+streamlit>=1.28.0                        # 极简 Web 框架
+
+# ----------------------
+# 工具与辅助
+# ----------------------
+python-dotenv>=1.0.0                     # 环境变量管理
+tiktoken>=0.5.0                          # Token 计数
+tenacity>=8.2.0                          # 重试机制
+tqdm>=4.66.0                             # 进度条
+
+# ----------------------
+# 开发调试
+# ----------------------
+ipython>=8.0.0                           # 交互式 Python
+rich>=13.0.0                             # 终端美化输出
